@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-creme: #F7F2E9;
+  --color-creme-light: #FFFCF7;
+  --color-creme-dark: #EDE3D6;
+  --color-brun: #49362E;
+  --color-brun-dark: #241B18;
+  --color-brun-light: #60483D;
+  --color-terracotta: #C56E4F;
+  --color-terracotta-hover: #A9573B;
+  --color-dore: #D6AE75;
+  --color-texte-muted: #75685F;
+  --color-texte-inverse: #D9CEC4;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { margin: 0; background: var(--color-creme); color: var(--color-brun-dark); font-family: var(--font-body); }
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+::selection { background: var(--color-terracotta); color: #fff; }
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--color-dore);
+  font-weight: bold;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

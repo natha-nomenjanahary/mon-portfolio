@@ -12,7 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.3.2"
+    "@tailwindcss/vite": "^4.3.3",
+    "aos": "^2.3.4",
+    "astro": "^7.3.2",
+    "tailwindcss": "^4.3.3",
+    "typed.js": "^3.0.0"
   },
   "allowScripts": {
     "esbuild": true

@@ -1,0 +1,10 @@
+---
+const links = [{label:"Accueil",href:"#accueil"},{label:"À propos",href:"#apropos"},{label:"Compétences",href:"#competences"},{label:"Projets",href:"#projets"},{label:"Contact",href:"#contact"}];
+---
+<header class="sticky top-0 z-50 border-b border-brun-dark/10 bg-creme-light/95 backdrop-blur-xl shadow-sm shadow-brun-dark/5">
+<nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigation principale">
+<a href="#accueil" class="font-heading text-xl font-bold tracking-tight text-brun-dark">N<span class="text-terracotta">.</span>N</a>
+<div class="hidden items-center gap-7 md:flex">{links.map(l=><a href={l.href} class="text-sm font-medium text-brun transition hover:text-terracotta">{l.label}</a>)}</div>
+<a href="#contact" class="hidden rounded-full bg-brun-dark px-5 py-2.5 text-sm font-semibold text-creme-light transition hover:bg-terracotta md:inline-flex">Me contacter <span class="ml-2 text-dore">↗</span></a>
+<details class="relative md:hidden"><summary class="cursor-pointer list-none rounded-full border border-brun-dark/15 px-4 py-2 text-sm text-brun-dark">Menu ☰</summary><div class="absolute right-0 mt-3 flex min-w-52 flex-col rounded-xl border border-brun-dark/10 bg-creme-light p-3 shadow-xl">{links.map(l=><a href={l.href} class="rounded-lg px-3 py-2 text-sm text-brun hover:bg-creme hover:text-terracotta">{l.label}</a>)}</div></details>
+</nav></header>

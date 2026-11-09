@@ -1,0 +1,170 @@
+---
+const email = "nathaaa.nomenjanahary@gmail.com";
+---
+
+<section id="accueil" class="relative isolate overflow-hidden bg-brun-dark text-creme-light">
+
+  <!-- Décoration de fond -->
+  <div class="pointer-events-none absolute -right-28 -top-10 h-[34rem] w-[34rem] rounded-full bg-terracotta/20 blur-3xl"></div>
+
+  <div class="pointer-events-none absolute -bottom-48 left-1/4 h-96 w-96 rounded-full bg-dore/10 blur-3xl"></div>
+
+  <!-- Contenu principal -->
+  <div class="relative mx-auto grid w-full max-w-7xl min-w-0 items-center gap-10 px-4 pt-4 pb-12 sm:gap-14 sm:px-5 sm:pt-6 sm:pb-16 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+
+    <!-- Présentation -->
+    <div class="relative z-10 min-w-0 w-full">
+
+      <!-- Badge formation -->
+      <p class="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-dore/30 bg-white/5 px-3 py-2 text-[10px] leading-none text-creme-light min-[360px]:text-xs sm:px-4 sm:text-sm">
+
+        <span class="h-2 w-2 shrink-0 rounded-full bg-dore shadow-[0_0_12px_#D6AE75]"></span>
+
+        <span class="whitespace-nowrap">
+          Master 2 · Informatique & Intelligence Artificielle
+        </span>
+
+      </p>
+
+      <!-- Introduction -->
+      <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-dore sm:text-sm sm:tracking-[0.25em]">
+        Bienvenue dans mon univers
+      </p>
+
+      <!-- Nom -->
+      <h1 class="max-w-full break-words font-heading text-[clamp(1.75rem,8vw,2.25rem)] font-bold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl">
+        RAHARIVOLOLONA<br />
+        <span class="text-terracotta">
+          Nomenjanahary Nathalie
+        </span>
+      </h1>
+
+      <!-- Texte animé -->
+      <p
+        class="mt-8 min-h-[84px] max-w-2xl break-words text-base leading-7 text-texte-inverse sm:mt-12 sm:min-h-[56px] sm:text-lg"
+        aria-live="polite"
+      >
+        <span id="typed-content"></span><span class="typing-cursor">|</span>
+      </p>
+
+      <!-- Boutons -->
+      <div class="mt-8 flex w-full flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:gap-4">
+
+        <a
+          href="#projets"
+          class="w-full rounded-full bg-terracotta px-5 py-3.5 text-center font-semibold text-white shadow-lg shadow-terracotta/20 transition hover:-translate-y-0.5 hover:bg-terracotta-hover sm:w-auto sm:px-7"
+        >
+          Découvrir mes projets ↗
+        </a>
+
+        <a
+          href="/cv/CV%20-%20Nomenjanahary%20Nathalie.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full rounded-full border border-creme-light/30 px-5 py-3.5 text-center font-semibold text-creme-light transition hover:border-dore hover:text-dore sm:w-auto sm:px-7"
+        >
+          Consulter mon CV ↗
+        </a>
+
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-texte-inverse">
+
+        <a
+          href="https://github.com/natha-nomenjanahary"
+          target="_blank"
+          rel="noreferrer"
+          class="transition hover:text-dore"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nathalie-raharivololona-605b80346/"
+          target="_blank"
+          rel="noreferrer"
+          class="transition hover:text-dore"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href={`mailto:${email}`}
+          class="transition hover:text-dore"
+        >
+          Email ↗
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <div class="mx-auto w-full max-w-xs min-w-0 sm:max-w-sm">
+
+      <div class="relative rounded-[2rem] border border-dore/30 bg-gradient-to-br from-brun-light to-brun p-2.5 shadow-2xl shadow-black/30 sm:p-3">
+
+        <div class="absolute -inset-3 -z-10 rounded-[2.5rem] border border-terracotta/20"></div>
+
+        <div class="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-[1.5rem] bg-brun">
+
+          <img
+            src="/images/profile.jpeg"
+            alt="Photo de RAHARIVOLOLONA Nomenjanahary Nathalie"
+            class="h-full w-full object-cover"
+          />
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Animation machine à écrire -->
+<script>
+  const phrases = [
+    "Je développe des applications web intuitives et performantes.",
+    "J'analyse les données pour révéler leur potentiel.",
+    "J'explore l'IA pour concevoir des solutions innovantes.",
+    "Je transforme les idées en solutions numériques.",
+    "J'apprends et j'innove au rythme des nouvelles technologies."
+  ];
+
+  const typedContent = document.querySelector("#typed-content");
+
+  if (typedContent) {
+    let phraseIndex = 0;
+    let letterIndex = 0;
+
+    function typeWriter() {
+      const currentPhrase = phrases[phraseIndex];
+
+      if (letterIndex < currentPhrase.length) {
+        typedContent.textContent += currentPhrase.charAt(letterIndex);
+        letterIndex++;
+
+        setTimeout(typeWriter, 60);
+      } else {
+        // Attendre avant de faire disparaître la phrase
+        setTimeout(() => {
+          typedContent.classList.add("fade-out");
+
+          // Passer à la phrase suivante après le fondu
+          setTimeout(() => {
+            typedContent.textContent = "";
+            typedContent.classList.remove("fade-out");
+
+            letterIndex = 0;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+
+            typeWriter();
+          }, 300);
+
+        }, 1000);
+      }
+    }
+
+    typeWriter();
+  }
+</script>

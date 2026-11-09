@@ -1,0 +1,105 @@
+---
+const groups = [
+  {
+    title: "Langages",
+    icon: "</>",
+    items: ["Java", "C#", "JavaScript", "TypeScript", "Python"]
+  },
+  {
+    title: "Frontend",
+    icon: "▣",
+    items: ["Vue.js", "Angular", "HTML", "CSS"]
+  },
+  {
+    title: "Backend",
+    icon: "▤",
+    items: ["NestJS", "Node.js", "Django"]
+  },
+  {
+    title: "Bases de données",
+    icon: "◉",
+    items: ["SQL", "PostgreSQL", "Supabase"]
+  },
+  {
+    title: "Outils",
+    icon: "⚒",
+    items: ["Git", "GitHub", "Figma", "Visual Studio Code"]
+  }
+];
+---
+
+<section id="competences" class="relative isolate overflow-hidden bg-brun-dark text-creme-light">
+
+  <!-- Lumières d'arrière-plan -->
+  <div class="pointer-events-none absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-terracotta/15 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-48 -left-32 h-[400px] w-[400px] rounded-full bg-dore/10 blur-[110px]"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 py-24 lg:px-8">
+
+    <!-- En-tête : dimensions conservées -->
+    <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-dore">
+      02 / Savoir-faire
+    </p>
+
+    <h2 class="font-heading text-3xl font-bold sm:text-4xl">
+      Compétences techniques
+    </h2>
+
+    <p class="mt-4 max-w-2xl leading-7 text-creme/75">
+      Les technologies et outils que j'ai étudiés ou utilisés dans mes travaux.
+      Les niveaux ne sont pas affichés afin de présenter mes compétences avec transparence.
+    </p>
+
+    <!-- Cartes compactes Liquid Glass -->
+    <div class="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+      {groups.map((g, i) => (
+        <article class="group relative isolate overflow-hidden rounded-2xl border border-white/20 bg-white/[0.06] p-5 shadow-[0_8px_25px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:border-dore/50 hover:bg-white/[0.10] hover:shadow-[0_12px_30px_rgba(214,174,117,0.12)]">
+
+          <!-- Reflet lumineux -->
+          <div class="pointer-events-none absolute inset-x-5 top-0 h-px bg-gradient-to-r from-transparent via-dore/80 to-transparent"></div>
+
+          <!-- Halo décoratif -->
+          <div class="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-dore/10 blur-3xl transition-all duration-500 group-hover:bg-dore/20"></div>
+
+          <div class="relative z-10">
+
+            <!-- En-tête de la carte -->
+            <div class="mb-5 flex items-center justify-between gap-3">
+
+              <div class="flex items-center gap-3">
+
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-lg font-bold text-dore shadow-inner backdrop-blur-lg transition group-hover:border-dore/50">
+                  {g.icon}
+                </div>
+
+                <h3 class="font-heading text-base font-semibold text-creme-light sm:text-lg">
+                  {g.title}
+                </h3>
+
+              </div>
+
+              <span class="font-heading text-xl font-bold text-dore/80">
+                0{i + 1}
+              </span>
+
+            </div>
+
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-2">
+
+              {g.items.map((item) => (
+                <span class="rounded-full border border-white/15 bg-white/[0.07] px-3 py-1.5 text-xs font-medium text-creme/90 backdrop-blur-lg transition-all duration-300 hover:border-dore/50 hover:bg-dore/15 hover:text-white">
+                  {item}
+                </span>
+              ))}
+
+            </div>
+
+          </div>
+        </article>
+      ))}
+
+    </div>
+  </div>
+</section>

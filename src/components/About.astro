@@ -1,0 +1,35 @@
+<section id="apropos" class="bg-creme-light">
+    <div class="mx-auto max-w-7xl px-5 py-24 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+                <p class="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-terracotta">
+                    01 / À propos
+                </p>
+                <h2 class="font-heading text-3xl font-bold text-brun-dark sm:text-4xl">
+                    Qui suis-je ?
+                </h2>
+                <div class="mt-6 h-1 w-20 rounded-full bg-dore">
+                </div>
+            </div>
+            <div>
+                <p class="text-lg leading-8 text-brun">
+                    Je suis <span class="font-bold">RAHARIVOLOLONA Nomenjanahary Nathalie</span> , étudiante en Master 2 en Informatique Statistique Appliquée et Intelligence Artificielle (ISAIA) à l'Institut Supérieur de Polytechnique de Madagascar (ISPM).
+                </p>
+                <p class="mt-5 leading-8 text-texte-muted">
+                    Je m'intéresse particulièrement au développement d'applications, à la manipulation et à l'analyse des données ainsi qu'aux applications de l'intelligence artificielle. À travers mes projets et mes formations, je cherche à renforcer mes compétences et à concevoir des solutions utiles, accessibles et bien pensées.
+                </p>
+            </div>
+        </div>
+        <div class="mt-14 grid gap-4 sm:grid-cols-3">
+            {[["Domaine","Informatique & IA"],["Formation","Master 2 — ISAIA"],["Approche","Apprendre en réalisant"]].map(([a,b])=>
+            <div class="rounded-2xl border border-brun-dark/10 bg-creme p-6 transition hover:-translate-y-1 hover:border-terracotta/40">
+                <p class="text-xs font-bold uppercase tracking-widest text-terracotta">
+                    {a}
+                </p>
+                <p class="mt-3 font-heading text-lg font-semibold text-brun-dark">
+                    {b}
+                </p>
+            </div>)}
+        </div>
+    </div>
+</section>
